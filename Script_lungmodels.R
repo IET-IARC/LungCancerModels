@@ -4,10 +4,11 @@
 # 3. LCDRAT 5y-----------------Lcmodels
 # 4. Bach 5y ------------------adjusted from Lcmodels, change 10-y to 5-y
 # 5. HUNT 6y-------------------manual, parameters were provided by HUNT team
-# 6. UCLD ---------------------publicly available script in Python
-# 7. UCLI ---------------------publicly available script in Python
+# 6. UCLD 5y---------------------publicly available script in Python
+# 7. UCLI 5y---------------------publicly available script in Python
 # 8. LLPV2 5y -----------------manual, parameters were provided by UK team
 # 9. LLPV3 5y -----------------manual, parameters were provided by UK team
+# 10. OWL 5y ------------------OWL function, choose the 5-y prediction
 
 
 #1. PLCOM2012 6y: Tammemagi MC, Katki HA, Hocking WG, et al. Selection criteria for lung-cancer screening. N Engl J Med 2013
@@ -152,7 +153,9 @@ data$sum_alpha_llpv3<-(data$t1*data$alpha_age_llpv3+data$t2*data$alpha_age_llpv3
 data <- data%>%mutate(riskLLPV2=1/(1+exp(-(sum_alpha_llpv2+sumB))),
                       riskLLPV3=1/(1+exp(-(sum_alpha_llpv3+sumB)))) 
 
-
+# 10 OWL
+#Pan Z, Zhang R, Shen S, et al. OWL: an optimized and independently validated machine learning prediction model for lung cancer screening based on the UK Biobank, PLCO, and NLST populations. EBioMedicine 2023; 88: 104443.
+#Script website: https://github.com/WeiLab4Research/OWL
 
 
 
